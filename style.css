@@ -15,6 +15,7 @@ html {
 
 body {
 	display: flex;
+	flex-direction: column;
 	font-family: 'Raleway', sans-serif;
 	background-color: var(--website-background);
 	color: var(--font-color);
@@ -28,8 +29,8 @@ nav {
 }
 
 .burger-btn {
-	position: absolute;
 	flex-direction: column;
+	position: fixed;
 	display: flex;
 	right: 0;
 	top: 0;
@@ -51,7 +52,7 @@ nav {
 }
 
 .navigation-list {
-	position: absolute;
+	position: fixed;
 	display: none;
 	flex-direction: column;
 	width: 160px;
@@ -61,7 +62,6 @@ nav {
 	color: var(--website-background);
 	list-style: none;
 	background-color: var(--font-color);
-	transition: 0.5s;
 	right: -300px;
 	top: 56px;
 	z-index: 99;
@@ -71,17 +71,29 @@ nav {
 	display: flex;
 	transform: translateX(-300px);
 }
-.navigation-list button {
+.nav-item {
 	padding: 20px 10px;
 	font-size: 20px;
+	width: 100%;
 	border: none;
-	color: var(--website-background);
 	background-color: var(--font-color);
+	text-decoration: none;
+	font-style: none;
 	cursor: pointer;
+	transition: 0.5s;
+}
+
+.nav-item a {
+	text-decoration: none;
+	color: var(--website-background);
 }
 
 header h1 {
 	font-size: 90px;
+}
+
+section {
+	height: 300px;
 }
 
 @media (min-width: 768px) {
