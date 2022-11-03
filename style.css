@@ -9,50 +9,79 @@ html {
 }
 
 :root {
-	--website-background: #2b2d42;
+	--website-background: #1b1c29;
 	--font-color: #9aaac1;
-	/* --btn-color: #e7a94b; */
 }
 
-@media (min-width: 375px) {
-	body {
-		display: flex;
-		font-family: 'Raleway', sans-serif;
-		background-color: var(--website-background);
-		color: var(--font-color);
-	}
+body {
+	display: flex;
+	font-family: 'Raleway', sans-serif;
+	background-color: var(--website-background);
+	color: var(--font-color);
+}
 
-	nav {
-		position: absolute;
-		display: flex;
-		flex-direction: column;
-		right: 0;
-	}
+nav {
+	position: absolute;
+	display: flex;
+	flex-direction: column;
+	right: 0;
+}
 
-	.burger-btn {
-		position: absolute;
-		flex-direction: column;
-		/* display: flex; */
-		display: none;
-		right: 5px;
-		top: 5px;
-		padding: 20px 22px;
-		background-color: var(--font-color);
-		border: none;
-		border-radius: 50%;
-	}
+.burger-btn {
+	position: absolute;
+	flex-direction: column;
+	display: flex;
+	right: 0;
+	top: 0;
+	padding: 20px 24px;
+	background-color: var(--font-color);
+	border: none;
+	z-index: 100;
+	cursor: pointer;
+}
 
-	.fa-angle-left {
-		font-size: 20px;
-		color: var(--website-background);
-	}
+.fa-angle-left {
+	font-size: 20px;
+	color: var(--website-background);
+	transition: transform 0.3s;
+}
 
-	.navigation-list {
-		padding: 10px;
-		color: var(--website-background);
-		list-style: none;
-		background-color: var(--font-color);
-	}
+.btn-rotate {
+	transform: rotate(180deg);
+}
+
+.navigation-list {
+	position: absolute;
+	display: none;
+	flex-direction: column;
+	width: 160px;
+	height: 360px;
+	text-align: center;
+	justify-content: space-around;
+	color: var(--website-background);
+	list-style: none;
+	background-color: var(--font-color);
+	transition: 0.5s;
+	right: -300px;
+	top: 56px;
+	z-index: 99;
+}
+
+.show-navigation-list {
+	display: flex;
+	transform: translateX(-300px);
+}
+.navigation-list button {
+	padding: 20px 10px;
+	font-size: 20px;
+	border: none;
+	color: var(--website-background);
+	background-color: var(--font-color);
+	cursor: pointer;
+}
+
+header h1 {
+	font-size: 90px;
 }
 
 @media (min-width: 768px) {
