@@ -8,5 +8,4 @@ const showNav = () => {
     navList.classList.toggle('show-navigation-list')
 
 }
-
 navBtn.addEventListener('click', showNav)
