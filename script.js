@@ -4,7 +4,7 @@ const navList = document.querySelector('.navigation-list')
 
 
 const showNav = () => {
-    navArrow.classList.toggle('btn-rotate')
+    navBtn.classList.toggle('btn-rotate')
     navList.classList.toggle('show-navigation-list')
 
 }

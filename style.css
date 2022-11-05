@@ -22,15 +22,17 @@ body {
 }
 
 nav {
-	position: absolute;
+	position: fixed;
 	display: flex;
 	flex-direction: column;
-	right: 0;
+	width: 100%;
+	/* background-color: #fff; */
+	/* display: none; */
 }
 
 .burger-btn {
 	flex-direction: column;
-	position: fixed;
+	position: absolute;
 	display: flex;
 	right: 0;
 	top: 0;
@@ -39,48 +41,57 @@ nav {
 	border: none;
 	z-index: 100;
 	cursor: pointer;
+	transition: all 0.3s;
 }
 
 .fa-angle-left {
 	font-size: 20px;
 	color: var(--website-background);
-	transition: transform 0.3s;
 }
 
 .btn-rotate {
-	transform: rotate(180deg);
+	transform: rotate(-180deg);
+	background-color: #808ea1;
+	border-radius: 50%;
 }
 
 .navigation-list {
 	position: fixed;
-	display: none;
+	display: flex;
 	flex-direction: column;
-	width: 160px;
-	height: 360px;
+	width: 50vw;
+	height: 100vh;
 	text-align: center;
 	justify-content: space-around;
 	color: var(--website-background);
 	list-style: none;
 	background-color: var(--font-color);
-	right: -300px;
-	top: 56px;
+	right: -50vw;
+	/* top: 56px; */
+	transition: all 0.3s;
 	z-index: 99;
+	overflow: hidden;
 }
 
 .show-navigation-list {
-	display: flex;
-	transform: translateX(-300px);
+	/* display: flex; */
+	transform: translateX(-50vw);
 }
 .nav-item {
-	padding: 20px 10px;
+	padding: 30px 10px;
 	font-size: 20px;
 	width: 100%;
 	border: none;
 	background-color: var(--font-color);
+	/* background: none; */
 	text-decoration: none;
 	font-style: none;
 	cursor: pointer;
 	transition: 0.5s;
+}
+
+.nav-item:hover {
+	transform: scale(1.2);
 }
 
 .nav-item a {
@@ -88,10 +99,18 @@ nav {
 	color: var(--website-background);
 }
 
-header h1 {
+.nav-item a:hover {
+}
+
+#home h1 {
 	font-size: 90px;
 }
 
+main {
+	display: flex;
+	margin-top: 300px;
+	display: none;
+}
 section {
 	height: 300px;
 }
