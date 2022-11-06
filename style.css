@@ -30,6 +30,11 @@ nav {
 	/* display: none; */
 }
 
+#header {
+	font-size: 60px;
+	transition: 0.3s;
+	backdrop-filter: blur(5px);
+}
 .burger-btn {
 	flex-direction: column;
 	position: absolute;
@@ -67,16 +72,20 @@ nav {
 	list-style: none;
 	background-color: var(--font-color);
 	right: -50vw;
-	/* top: 56px; */
-	transition: all 0.3s;
+	transition: 0.3s;
 	z-index: 99;
 	overflow: hidden;
 }
 
 .show-navigation-list {
-	/* display: flex; */
 	transform: translateX(-50vw);
 }
+
+.header-scale {
+	transform: scale(0.2) translate(-200%, -200%);
+
+}
+
 .nav-item {
 	padding: 30px 10px;
 	font-size: 20px;
@@ -99,17 +108,13 @@ nav {
 	color: var(--website-background);
 }
 
-.nav-item a:hover {
-}
-
-#home h1 {
-	font-size: 90px;
-}
+/* .nav-item a:hover {
+} */
 
 main {
 	display: flex;
 	margin-top: 300px;
-	display: none;
+	/* display: none; */
 }
 section {
 	height: 300px;
