@@ -9,8 +9,8 @@ html {
 }
 
 :root {
-	--website-background: #131422;
-	--font-color: #9aaac1;
+	--website-background: #0f2920;
+	--font-color: #4d8766;
 }
 
 body {
@@ -32,8 +32,8 @@ nav {
 
 #header {
 	font-size: 60px;
-	transition: 0.3s;
-	backdrop-filter: blur(5px);
+	transition: cubic-bezier(0.05, 0.12, 0.165, 1) 0.5s;
+	backdrop-filter: blur(8px);
 }
 .burger-btn {
 	flex-direction: column;
@@ -58,6 +58,7 @@ nav {
 	transform: rotate(-180deg);
 	background-color: #808ea1;
 	border-radius: 50%;
+	filter: drop-shadow(0px 0px 10px white);
 }
 
 .navigation-list {
@@ -67,7 +68,7 @@ nav {
 	width: 50vw;
 	height: 100vh;
 	text-align: center;
-	justify-content: space-around;
+	justify-content: space-evenly;
 	color: var(--website-background);
 	list-style: none;
 	background-color: var(--font-color);
@@ -83,29 +84,22 @@ nav {
 
 .header-scale {
 	transform: scale(0.2) translate(-200%, -200%);
-
 }
 
 .nav-item {
-	padding: 30px 10px;
-	font-size: 20px;
-	width: 100%;
-	border: none;
-	background-color: var(--font-color);
-	/* background: none; */
 	text-decoration: none;
 	font-style: none;
 	cursor: pointer;
 	transition: 0.5s;
+	letter-spacing: 3px;
+	padding: 40px 0;
+	font-size: 24px;
+	text-decoration: none;
+	color: var(--website-background);
 }
 
 .nav-item:hover {
 	transform: scale(1.2);
-}
-
-.nav-item a {
-	text-decoration: none;
-	color: var(--website-background);
 }
 
 /* .nav-item a:hover {
@@ -113,7 +107,9 @@ nav {
 
 main {
 	display: flex;
-	margin-top: 300px;
+	margin: 300px 20px 0px 20px;
+	font-size: 18px;
+
 	/* display: none; */
 }
 section {
